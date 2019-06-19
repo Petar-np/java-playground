@@ -7,11 +7,13 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-	    int[] array = getIntegers(10);
+	    int[] array = getIntegers(5);
 	    printArray(array);
         System.out.println("Sorted:");
-	    int[] sorted = sortArray(array);
+	    int[] sorted = sortArray(array.clone());
         printArray(sorted);
+        System.out.println("Print original array:");
+        printArray(array);
     }
 
     public static int[] getIntegers(int number) {
